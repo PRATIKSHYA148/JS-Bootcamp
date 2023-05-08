@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f363e;
+}
+.clock{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: #2f363e;
+    box-shadow: 10px 50px 70px rgba(0, 0, 0, .25 ),
+    inset 5px 5px 10px rgba(0, 0, 0, .5 ),
+    inset 5px 5px 20px rgba(0, 0, 0, .2 ),
+    inset -5px -5px 15px rgba(0, 0, 0, .75 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+.clock::before{
+    content: '';
+     position: relative;
+     width: 8px;
+     height: 8px;
+     background:#2f363e;
+     border: 3px solid #fff;
+     border-radius: 50%;
+     z-index: 1000;
+
+}
+.container{
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, .75 ),
+    inset 10px 50px 70px rgba(0, 0, 0,.25 ),
+    inset 5px 5px 10px rgba(0, 0, 0, .5 ),
+    inset 5px 5px 70px rgba(0, 0, 0, .2 ),
+    inset -5px -5px 15px rgba(0, 0, 0, .75 );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+
+}
+
+.clock span{
+    position: absolute;
+    inset:20px;
+    text-align: center;
+    transform: rotate(calc(30deg *var(--i)));
+}
+.clock span b{
+    font-size: 2em;
+    font-weight: 600;
+    display: inline-block;
+    color: #fff;
+    transform: rotate(calc(-30deg *var(--i)));
+
+}
+
+.circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(0, 0, 0, .25 );
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: inherit;
+}
+.circle2{
+    width: 240px;
+    height: 240px;
+
+}
+.circle3{
+    width: 180px;
+    height: 180px;
+    z-index: 8;
+}
+.circle i{
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: var(--clr);
+    opacity: .5;
+    transform-origin: bottom;
+    transform: scaleY(.5);
+    z-index: 9;
+} 
+.circle:nth-child(1) i{
+    width: 2px;
+
+}
+.circle:nth-child(2) i{
+    width: 2px;
+}
+
+.circle::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    top: -8.5px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+}
+.name{
+    color: blanchedalmond;
+    margin-bottom: 30px ;
+}
